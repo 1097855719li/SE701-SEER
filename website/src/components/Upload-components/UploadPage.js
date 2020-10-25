@@ -17,7 +17,7 @@ function Uploadhpage(){
     const [uploaddate, setUploaddate]= useState('');
 
     const submitReview = () => {
-        Axios.post("http://localhost:3010/api/insert", {
+        Axios.post(process.env.baseURL || "http://localhost:3001", {
             author: author,
             title: title,
             journal: journal,
